@@ -32,7 +32,7 @@ namespace HoloToolkit.Unity
 
             if (!string.IsNullOrEmpty(NextSceneName))
             {
-                SceneManager.LoadScene(NextSceneName);
+                SceneLoader.Instance.ChangeToScene(NextSceneName);
             }
             else
             {

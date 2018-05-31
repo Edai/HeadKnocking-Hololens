@@ -4,4 +4,19 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/HoloToolkit/Utilities/Scenes/HeadsetAdjustment.unity
+    guid: 6328c96cc619a8b41a866766f9513e17
+  - enabled: 1
+    path: Assets/Scenes/Bootstrap.unity
+    guid: 359295e7afadba844842576bd511b451
+  - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: 8dff4000993284041a1965a1de7fe3ef
+  - enabled: 1
+    path: Assets/Scenes/TargetTask.unity
+    guid: a0cafa4ba184bd6489c4a964e1ae7bea
+  - enabled: 1
+    path: Assets/Scenes/KeyboardTask.unity
+    guid: 5a45665666c1b10459cbc41c9bb00703
