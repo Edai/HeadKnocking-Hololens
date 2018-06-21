@@ -4,5 +4,14 @@ using UnityEngine;
 
 public class TaskManager : Singleton<TaskManager>
 {
+    [SerializeField]
+    GameObject cursor;
     
+    public GameObject Cursor
+    {
+        get
+        {
+            return cursor;
+        }
+    }
 }

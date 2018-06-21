@@ -2,8 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UserManager : MonoBehaviour
+public class UserManager : Singleton<UserManager>
 {
+    [SerializeField]
+    private User _user;
+    public User user
+    {
+        get
+        {
+            return _user;
+        }
+    }
+
 	// Use this for initialization
 	void Start () {
         LoadUserFromFile();

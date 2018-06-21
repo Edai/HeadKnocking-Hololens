@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Task
+public abstract class TaskHead : MonoBehaviour
 {
     [SerializeField]
     private string name = "Task";
@@ -14,5 +14,4 @@ public abstract class Task
 
     [SerializeField]
     public bool replayLastRecord = false;
-
 }
