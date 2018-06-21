@@ -55,10 +55,10 @@ public class TargetObject : MonoBehaviour, IInputClickHandler
 
     public void OnInputClicked(InputClickedEventData eventData)
     {
-        //Recorder.Instance.Stop();
-        //Recorder.Instance.SaveFile();
-        //TargetRecorder.Instance.Stop();
-        //TargetRecorder.Instance.SaveFile();
+        Recorder.Instance.Stop();
+        Recorder.Instance.SaveFile();
+        TargetRecorder.Instance.Stop();
+        TargetRecorder.Instance.SaveFile();
         Debug.Log("click");
         transform.gameObject.SetActive(false);
     }
@@ -67,8 +67,8 @@ public class TargetObject : MonoBehaviour, IInputClickHandler
     {
         if (isHeadClicking == true)
         {
-            //Recorder.Instance.Launch();
-            //TargetRecorder.Instance.Launch();
+            Recorder.Instance.Launch();
+            TargetRecorder.Instance.Launch();
         }
     }
 
@@ -82,13 +82,13 @@ public class TargetObject : MonoBehaviour, IInputClickHandler
         }
         if (islegal)
         {
-            //Recorder.Instance.SaveFile();
-            //TargetRecorder.Instance.SaveFile();
+            Recorder.Instance.SaveFile();
+            TargetRecorder.Instance.SaveFile();
             transform.parent.gameObject.SetActive(false);
         }
         //Debug.Log(islegal);
-        //Recorder.Instance.Stop();
-        //TargetRecorder.Instance.Stop();
+        Recorder.Instance.Stop();
+        TargetRecorder.Instance.Stop();
     }
 
     public void OnPress()
@@ -125,7 +125,7 @@ public class TargetObject : MonoBehaviour, IInputClickHandler
     {
         if (col.gameObject == TaskManager.Instance.Cursor)
         {  
-            //TargetRecorder.Instance.Enter();
+            TargetRecorder.Instance.Enter();
             mainCircle.material.color = mainCircle.material.color / 1.2f + new Color(0, 0, 0, 0.5f);
             if (targetType == (int)TargetManager.targetType.Pass)
             {
@@ -137,12 +137,12 @@ public class TargetObject : MonoBehaviour, IInputClickHandler
     void OnTriggerExit(Collider col)
     {
         mainCircle.material.color = c;
-       // TargetRecorder.Instance.Leave();
+        TargetRecorder.Instance.Leave();
         //timeout for pass and dwell
         if (timeout == true || targetType == (int)TargetManager.targetType.Dwell)
         {
-            //Recorder.Instance.SaveFile();
-            //TargetRecorder.Instance.SaveFile();
+            Recorder.Instance.SaveFile();
+            TargetRecorder.Instance.SaveFile();
             transform.gameObject.SetActive(false);
             timeout = false;
         }

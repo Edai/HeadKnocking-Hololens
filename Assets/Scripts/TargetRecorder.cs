@@ -43,7 +43,7 @@ public class TargetRecorder : Singleton<TargetRecorder> {
     {
         count_target++;
         string destination = Application.persistentDataPath + "target_" + UserManager.Instance.user.name + ".csv";
-        //Debug.Log("File created : " + destination);
+        Debug.Log("File created : " + destination);
         using (TextWriter writer = File.CreateText(destination))
         {
             foreach (var s in data)

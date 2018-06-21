@@ -30,7 +30,7 @@ public class UserManager : Singleton<UserManager>
 
     void LoadUserFromFile()
     {
-        //TODO
+        _user = new User();
     }
 }
 
