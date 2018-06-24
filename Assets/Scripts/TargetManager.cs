@@ -266,7 +266,13 @@ public class TargetManager : TaskHead
                     current_task = 0;
                 }
             }
+            
+            // random on the sphere surface
 
+            setTargetPosition(currentTarget, current_session * numberTasks + current_task);
+
+            //type
+            setTargetType();
         }
         else // just keep object relatively fixed to the head
         {

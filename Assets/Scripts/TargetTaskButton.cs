@@ -21,4 +21,11 @@ public class TargetTaskButton : MonoBehaviour, IInputClickHandler
     {
         SceneLoader.Instance.ChangeToScene(name);
     }
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            SceneLoader.Instance.ChangeToScene(name);
+        }
+    }
 }

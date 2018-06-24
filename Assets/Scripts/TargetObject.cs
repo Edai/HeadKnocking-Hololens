@@ -42,6 +42,15 @@ public class TargetObject : MonoBehaviour, IInputClickHandler
     private void Update()
     {
         //timer event
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            Recorder.Instance.Stop();
+            Recorder.Instance.SaveFile();
+            TargetRecorder.Instance.Stop();
+            TargetRecorder.Instance.SaveFile();
+            Debug.Log("click");
+            transform.gameObject.SetActive(false);
+        }
         if (timer_count > 0)
         {
             timer_count--;
